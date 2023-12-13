@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    header {
+      height: 60px;
+      background: #84A06D;
+      padding: 0 50px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000; /* Ensure the header stays on top */
+    }
+    
+    .logo {
+      width: 30%;
+      float: left;
+      color: #f8f6f7;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 60px;
+      font-size: 35px;
+      font-family: serif;
+    }
+    
+    nav {
+      width: 68%;
+      float: right;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      float: right;
+    }
+    
+    nav ul li {
+      display: inline-block;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-family: italic;
+      font-weight: bold;
+      margin: 0 10px;
+      line-height: 70px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      transition: 0.8s ease;
+    }
+    
+    ul li a:hover {
+      background-color: #;
+      color: #000;
+    }
+    
+    /* Adjust the video container */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Make the video container full height */
+      overflow: hidden; /* Hide any overflowing content */
+    }
+    
+    #myVideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+    
+    .content {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    #myBtn {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    #myBtn:hover {
+      background: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">iqlimaae</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="friends.html">Friends</a></li>
+      <li><a href="interest.html">Favourite</a></li>
+      <li><a href="playlist.html">Playlist</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="socmed.html">Contact Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="video-container">
+  <video autoplay muted loop id="myVideo">
+    <source src="myvid.mov" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content">
+    <h1>IQLIMAAE PAGE</h1>
+    <br>
+    <p>Hi, welcome to my simple personal website! Hope you enjoy travelling on my small website. Click any menu that you interested and it will lead you to my another page. Thank you!</p>
+    <br>
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+  </div>
+</div>
+
+<script>
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+</script>
+
+</body>
+</html>
+
